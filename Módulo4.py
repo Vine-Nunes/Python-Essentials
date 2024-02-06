@@ -1,6 +1,18 @@
-nome = str(input("qual o seu nome?"))
-if nome == 'vinicius':
-    print ('que nome bonito voce tem!')
+n = int(input("number: "))
+m = 0
 
-print ("bom dia, {}!".format(nome))
-  
+while n!=1:
+    
+    if n%2==0:
+        n = n/2
+        print (n)
+        m = m+1
+    elif n%2!=0:
+        n = 3*n+1
+        print(n)
+        m = m+1
+    else:
+        break
+
+print(n)     
+print("passos: ",m)    
