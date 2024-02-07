@@ -1,18 +1,40 @@
-n = int(input("number: "))
-m = 0
-
-while n!=1:
+year = int(input("tell me any year: "))
+month = int(input("select a month from 1 to 12: "))
+day = int(input("chosse a day: "))
+if year > 2024:
+    print(None)
+    break
+elif month > 12:
+    print(None) 
+    break   
+if year%4==0 and month==2:
     
-    if n%2==0:
-        n = n/2
-        print (n)
-        m = m+1
-    elif n%2!=0:
-        n = 3*n+1
-        print(n)
-        m = m+1
+    if day > 29:
+        print(None)
     else:
-        break
+        print(day, month, year)
 
-print(n)     
-print("passos: ",m)    
+elif month==1 or month==3 or month==5 or month==7 or month==8 or month==10 or month==12:
+   
+    if day > 31:
+        print(None)
+    else:
+        print(day, month, year)
+
+elif month==2:
+    
+    if day > 28:
+        print(None)
+    else:
+        print(day, month, year)
+
+elif month==4 or month==6 or month==9 or month==11: 
+    
+    if day > 30:
+        print(None)
+    else:
+        print(day, month, year)
+else:
+    None
+
+
